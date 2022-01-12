@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assignment1.css">
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <header class="container-fluid p-0">
+            <h3><i class="fa fa-shopping-cart"></i> Shopping cart</h3>
+        </header>
+        <div class="row container-fluid m-4">
+            <div class=" product m-1 text-center">
+                <article>
+                    <img src="images/headphone.jpg">
+                    <div class="card-body">
+                        <p class="card-title" id="name1">Headphones</p>
+                        <p class="card-text" id="cost1"> 3699</p>
+                        <button class="btn btn-warning" id="cart1" onclick=" change(); addtoCart1()">
+                            Add to
+                            Cart</button>
+                    </div>
+                </article>
+            </div>
+            <div class="product m-1 text-center">
+                <article>
+                    <img src="images/chiar.png">
+                    <div class="card-body">
+                        <p class="card-title" id="name2">Study Chair</p>
+                        <p class="card-text" id="cost2"> 13699</p>
+                        <button class="btn btn-warning" id="cart2" onclick=" change(); addtoCart2()">
+                            Add to
+                            Cart</button>
+                    </div>
+                </article>
+            </div>
+            <div class="product m-1 text-center">
+                <article>
+                    <img src="images/laptop.jpg">
+                    <div class="card-body">
+                        <p class="card-title" id="name3">Laptop</p>
+                        <p class="card-text" id="cost3"> 83699</p>
+                        <button class="btn btn-warning" id="cart3" onclick=" change(); addtoCart3()">
+                            Add to
+                            Cart</button>
+                    </div>
+                </article>
+            </div>
+            <div class="product m-1 text-center">
+                <article>
+                    <img src="images/mac.jpg">
+                    <div class="card-body">
+                        <p class="card-title" id="name4">Laptop Macbook</p>
+                        <p class="card-text" id="cost4"> 113699</p>
+                        <button class="btn btn-warning" id="cart4" onclick=" change(); addtoCart4()">
+                            Add to
+                            Cart</button>
+                    </div>
+                </article>
+            </div>
+            <div class="product m-1 text-center">
+                <article>
+                    <img src="images/mobile.jpg">
+                    <div class="card-body">
+                        <p class="card-title" id="name5">Redmi 10 Prime</p>
+                        <p class="card-text" id="cost5"> 13699</p>
+                        <button class="btn btn-warning" id="cart5" onclick=" change(); addtoCart5()">
+                            Add to
+                            Cart</button>
+                    </div>
+                </article>
+            </div>
+            <div class="product m-1 text-center">
+                <article>
+                    <img src="images/mobile2.jpg">
+                    <div class="card-body">
+                        <p class="card-title" id="name6">Samsung M32</p>
+                        <p class="card-text" id="cost6"> 31699</p>
+                        <button class="btn btn-warning" id="cart6" onclick=" change(); addtoCart6()">
+                            Add to
+                            Cart</button>
+                    </div>
+                </article>
+            </div>
+            <div class="product m-1 text-center">
+                <article>
+                    <img src="images/mobile3.jpg">
+                    <div class="card-body">
+                        <p class="card-title" id="name7">Realme 8 5G</p>
+                        <p class="card-text" id="cost7"> 36199</p>
+                        <button class="btn btn-warning" id="cart7" onclick=" change(); addtoCart7()">
+                            Add to
+                            Cart</button>
+                    </div>
+                </article>
+            </div>
+            <div class="product m-1 text-center">
+                <article>
+                    <img src="images/beanbag.jpg">
+                    <div class="card-body">
+                        <p class="card-title" id="name8">Headphones</p>
+                        <p class="card-text" id="cost8"> 1699</p>
+                        <button class="btn btn-warning" id="cart8" onclick="change(); addtoCart8()">
+                            Add to
+                            Cart</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let products_cart = [];
+
+        function addtoCart1() {
+
+            let btn1 = document.querySelector("#name1").textContent;
+            let cst1 = document.querySelector("#cost1").textContent;
+            let products_obj = {
+                name: btn1,
+                price: cst1
+            }
+            products_cart.push(products_obj);
+            console.log(products_cart);
+            let productArrayToJson = JSON.stringify(products_cart);
+            localStorage.setItem("Products_data", productArrayToJson);
+        }
+
+        function addtoCart2() {
+            let btn2 = document.querySelector("#name2").textContent;
+            let cst2 = document.querySelector("#cost2").textContent;
+            let products_obj = {
+                name: btn2,
+                price: cst2
+            }
+            products_cart.push(products_obj);
+            let productArrayToJson = JSON.stringify(products_cart);
+            localStorage.setItem("Products_data", productArrayToJson);
+        }
+
+        function addtoCart3() {
+            let btn3 = document.querySelector("#name3").textContent;
+            let cst3 = document.querySelector("#cost3").textContent;
+            let products_obj = {
+                name: btn3,
+                price: cst3
+            }
+            products_cart.push(products_obj);
+            let productArrayToJson = JSON.stringify(products_cart);
+            localStorage.setItem("Products_data", productArrayToJson);
+        }
+
+        function addtoCart4() {
+            let btn4 = document.querySelector("#name4").textContent;
+            let cst4 = document.querySelector("#cost4").textContent;
+            let products_obj = {
+                name: btn4,
+                price: cst4
+            }
+            products_cart.push(products_obj);
+            let productArrayToJson = JSON.stringify(products_cart);
+            localStorage.setItem("Products_data", productArrayToJson);
+        }
+
+        function addtoCart5() {
+            let btn5 = document.querySelector("#name5").textContent;
+            let cst5 = document.querySelector("#cost5").textContent;
+            let products_obj = {
+                name: btn5,
+                price: cst5
+            }
+            products_cart.push(products_obj);
+            let productArrayToJson = JSON.stringify(products_cart);
+            localStorage.setItem("Products_data", productArrayToJson);
+        }
+
+        function addtoCart6() {
+            let btn6 = document.querySelector("#name6").textContent;
+            let cst6 = document.querySelector("#cost6").textContent;
+            let products_obj = {
+                name: btn6,
+                price: cst6
+            }
+            products_cart.push(products_obj);
+            let productArrayToJson = JSON.stringify(products_cart);
+            localStorage.setItem("Products_data", productArrayToJson);
+        }
+
+        function addtoCart7() {
+            let btn7 = document.querySelector("#name7").textContent;
+            let cst7 = document.querySelector("#cost7").textContent;
+            let products_obj = {
+                name: btn7,
+                price: cst7
+            }
+            products_cart.push(products_obj);
+            let productArrayToJson = JSON.stringify(products_cart);
+            localStorage.setItem("Products_data", productArrayToJson);
+        }
+
+        function addtoCart8() {
+            let btn8 = document.querySelector("#name8").textContent;
+            let cst8 = document.querySelector("#cost8").textContent;
+            let products_obj = {
+                name: btn8,
+                price: cst8
+            }
+            products_cart.push(products_obj);
+            let productArrayToJson = JSON.stringify(products_cart);
+            localStorage.setItem("Products_data", productArrayToJson);
+        }
+        function change() {
+            let btn1 = document.querySelector("#cart1");
+            let btn2 = document.querySelector("#cart2");
+            let btn3 = document.querySelector("#cart3");
+            let btn4 = document.querySelector("#cart4");
+            let btn5 = document.querySelector("#cart5");
+            let btn6 = document.querySelector("#cart6");
+            let btn7 = document.querySelector("#cart7");
+            let btn8 = document.querySelector("#cart8");
+
+            [btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8].forEach(element => {
+                element.addEventListener("click", () => {
+
+                    if (element.textContent == "Add to Cart") {
+                        element.textContent = "Remove from Cart";
+                    } else {
+                        element.textContent = "Add to Cart";
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
