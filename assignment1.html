@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assignment1.css">
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <header class="container-fluid p-0">
+            <h3><i class="fa fa-shopping-cart"></i> Shopping cart</h3>
+        </header>
+        <div class="row container-fluid m-4">
+            <div class="product m-1 text-center">
+                <article>
+                    <img src="images/headphone.jpg">
+                    <div class="card-body">
+                        <p class="card-title">Headphones</p>
+                        <p class="card-text">₹ 3,699</p>
+                        <button class="btn btn-warning" id="cart1" onclick="change()">
+                            Add to
+                            Cart</button>
+                    </div>
+                </article>
+            </div>
+            <div class="product m-1 text-center">
+                <article>
+                    <img src="images/chiar.png">
+                    <div class="card-body">
+                        <p class="card-title" id="name2">Study Chair</p>
+                        <p class="card-text" id="cost2"> ₹ 13,699</p>
+                        <button class="btn btn-warning" id="cart2" onclick="change()">
+                            Add to
+                            Cart</button>
+                    </div>
+                </article>
+            </div>
+            <div class="product m-1 text-center">
+                <article>
+                    <img src="images/laptop.jpg">
+                    <div class="card-body">
+                        <p class="card-title" id="name3">Laptop</p>
+                        <p class="card-text" id="cost3"> ₹ 83,699</p>
+                        <button class="btn btn-warning" id="cart3" onclick="change()">
+                            Add to
+                            Cart</button>
+                    </div>
+                </article>
+            </div>
+            <div class="product m-1 text-center">
+                <article>
+                    <img src="images/mac.jpg">
+                    <div class="card-body">
+                        <p class="card-title" id="name4">Laptop Macbook</p>
+                        <p class="card-text" id="cost4"> ₹ 11,3699</p>
+                        <button class="btn btn-warning" id="cart4" onclick="change()">
+                            Add to
+                            Cart</button>
+                    </div>
+                </article>
+            </div>
+            <div class="product m-1 text-center">
+                <article>
+                    <img src="images/mobile.jpg">
+                    <div class="card-body">
+                        <p class="card-title" id="name5">Redmi 10 Prime</p>
+                        <p class="card-text" id="cost5"> ₹ 13,699</p>
+                        <button class="btn btn-warning" id="cart5" onclick="change()">
+                            Add to
+                            Cart</button>
+                    </div>
+                </article>
+            </div>
+            <div class="product m-1 text-center">
+                <article>
+                    <img src="images/mobile2.jpg">
+                    <div class="card-body">
+                        <p class="card-title" id="name6">Samsung M32</p>
+                        <p class="card-text" id="cost6"> ₹ 31,699</p>
+                        <button class="btn btn-warning" id="cart6" onclick="change()">
+                            Add to
+                            Cart</button>
+                    </div>
+                </article>
+            </div>
+            <div class="product m-1 text-center">
+                <article>
+                    <img src="images/mobile3.jpg">
+                    <div class="card-body">
+                        <p class="card-title" id="name7">Realme 8 5G</p>
+                        <p class="card-text" id="cost7"> ₹ 36,199</p>
+                        <button class="btn btn-warning" id="cart7" onclick="change()">
+                            Add to
+                            Cart</button>
+                    </div>
+                </article>
+            </div>
+            <div class="product m-1 text-center">
+                <article>
+                    <img src="images/beanbag.jpg">
+                    <div class="card-body">
+                        <p class="card-title">Headphones</p>
+                        <p class="card-text">₹ 1,699</p>
+                        <button class="btn btn-warning" id="cart8" onclick="change()">
+                            Add to
+                            Cart</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function change() {
+            let btn1 = document.querySelector("#cart1");
+            let btn2 = document.querySelector("#cart2");
+            let btn3 = document.querySelector("#cart3");
+            let btn4 = document.querySelector("#cart4");
+            let btn5 = document.querySelector("#cart5");
+            let btn6 = document.querySelector("#cart6");
+            let btn7 = document.querySelector("#cart7");
+            let btn8 = document.querySelector("#cart8");
+
+            [btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8].forEach(element => {
+                element.addEventListener("click", () => {
+
+                    if (element.textContent == "Add to Cart") {
+                        element.textContent = "Remove from Cart";
+                    } else {
+                        element.textContent = "Add to Cart";
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
